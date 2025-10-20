@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Development Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Developed By Naresh</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#carousel">Gallery</a></li>
+                <li><a href="#weather">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Interactive Web Experience</h2>
+                <p>Explore responsive design, interactive quizzes, image carousels, and real-time API data</p>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz Section -->
+        <section id="quiz" class="section quiz-section">
+            <div class="container">
+                <h2 class="section-title">Interactive Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">Question 1 of 5</span>
+                        </div>
+                        <div class="quiz-score">
+                            Score: <span id="currentScore">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-content">
+                        <div class="question-container" id="questionContainer">
+                            <h3 class="question-title" id="questionTitle"></h3>
+                            <div class="options-container" id="optionsContainer"></div>
+                        </div>
+                        
+                        <div class="quiz-results hidden" id="quizResults">
+                            <h3>Quiz Complete!</h3>
+                            <div class="final-score">
+                                <span class="score-number" id="finalScore"></span>
+                                <span class="score-text" id="scoreText"></span>
+                            </div>
+                            <button class="btn btn-primary" id="restartQuiz">Restart Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Carousel Section -->
+        <section id="carousel" class="section carousel-section">
+            <div class="container">
+                <h2 class="section-title">Natural BeautyGallery</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide">
+                                <img src="https://picsum.photos/800/600?random=1" alt="Gallery Image 1" class="carousel-image">
+                                <div class="slide-caption">Beautiful Landscape 1</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://picsum.photos/800/600?random=2" alt="Gallery Image 2" class="carousel-image">
+                                <div class="slide-caption">Beautiful Landscape 2</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://picsum.photos/800/600?random=3" alt="Gallery Image 3" class="carousel-image">
+                                <div class="slide-caption">Beautiful Landscape 3</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://picsum.photos/800/600?random=4" alt="Gallery Image 4" class="carousel-image">
+                                <div class="slide-caption">Beautiful Landscape 4</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://picsum.photos/800/600?random=5" alt="Gallery Image 5" class="carousel-image">
+                                <div class="slide-caption">Beautiful Landscape 5</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn" id="prevBtn">‹</button>
+                        <button class="carousel-btn next-btn" id="nextBtn">›</button>
+                    </div>
+                    
+                    <div class="carousel-indicators" id="carouselIndicators"></div>
+                    
+                    <div class="carousel-options">
+                        <button class="btn btn-secondary" id="autoPlayBtn">Start Auto Play</button>
+                        <button class="btn btn-secondary" id="pauseBtn">Pause</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Data Section -->
+        <section id="weather" class="section api-section">
+            <div class="container">
+                <h2 class="section-title">Real-time Weather Data</h2>
+                <div class="api-container">
+                    <div class="api-controls">
+                        <input type="text" id="cityInput" placeholder="Enter city name" class="input-field">
+                        <button class="btn btn-primary" id="fetchWeatherBtn">Get Weather</button>
+                        <button class="btn btn-secondary" id="fetchJokeBtn">Get Random Joke</button>
+                    </div>
+                    
+                    <div class="api-results">
+                        <div class="weather-card hidden" id="weatherCard">
+                            <h3>Weather Information</h3>
+                            <div class="weather-content" id="weatherContent"></div>
+                        </div>
+                        
+                        <div class="joke-card hidden" id="jokeCard">
+                            <h3>Random Joke</h3>
+                            <div class="joke-content" id="jokeContent"></div>
+                            <button class="btn btn-secondary" id="newJokeBtn">New Joke</button>
+                        </div>
+                        
+                        <div class="loading-spinner hidden" id="loadingSpinner">
+                            <div class="spinner"></div>
+                            <p>Loading...</p>
+                        </div>
+                        
+                        <div class="error-message hidden" id="errorMessage">
+                            <p>Something went wrong. Please try again.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Advanced Web Development Project. Built with responsive design and modern JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
